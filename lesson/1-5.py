@@ -1,0 +1,5 @@
+print('Input your family name')
+surname = input('>> ')
+print('Input your given name')
+name = input('>> ')
+print(f"{surname}{name}さん")

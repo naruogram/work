@@ -1,0 +1,10 @@
+a=2j
+b=4j
+print((3+a)+(2+b))
+a=3j
+b=2j
+print((5+a)-(3+b))
+a=2j
+print((1+a)*2)
+b=1j
+print((1+a)*b)
