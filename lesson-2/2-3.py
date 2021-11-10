@@ -7,3 +7,4 @@ for i in d:
    print(d[i])
 # 辞書中のキーの一覧と値の一覧も表示
 print(d.keys())
+print(d.values())
