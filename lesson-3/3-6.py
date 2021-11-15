@@ -1,6 +1,5 @@
 import math
-import cmath
-# cmathは複素数のライブラリ
+
 a=int(input("a >>"))
 b=int(input("b >>"))
 c=int(input("c >>"))
@@ -14,8 +13,8 @@ if a!=0:
     x_1=-b/(2*a)
     print(f"答えは: {x_1}")
   else:
-    x_1=(-b+cmath.sqrt(d))/(2*a)
-    x_2=(-b-cmath.sqrt(d))/(2*a)
+    x_1=(-b+math.sqrt(-d)*1j)/(2*a)
+    x_2=(-b-math.sqrt(-d)*1j)/(2*a)
     print(f"答えは: {x_1},{x_2}")
 else:
     x_1=(-c/b)
