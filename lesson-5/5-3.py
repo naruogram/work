@@ -10,4 +10,5 @@ while N>0:
     else:
         print("You can't return money")
         break
-print(f"Finished in {count} years")
+if count!=0:
+    print(f"Finished in {count} years")
