@@ -1,6 +1,6 @@
 num=int(input("Input natural number >>"))
 
-while num==num:
+while True:
     if num==0:
         print("End")
         break
