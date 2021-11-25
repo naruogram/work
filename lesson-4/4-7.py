@@ -11,12 +11,12 @@ d={}
 for i in range(len(list_c)):
    if i<4:
       prices.append(ichiban_price*(2**i))
+      d[list_c[i]]=prices[i]
    else:
       i-=4
       prices.append(superdry_price*(2**i))
-
-for k in range(len(list_c)):
-   d[list_c[k]]=prices[k]
+      i+=4
+      d[list_c[i]]=prices[i]
 
 for k in d:
     print(d[k])
