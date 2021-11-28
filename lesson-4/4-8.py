@@ -1,5 +1,4 @@
 import math
-a=2
 for i in range(2,16): 
     a=2**i
     r=1
