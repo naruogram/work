@@ -1,35 +1,36 @@
 n=int(input("Input prime number "))
-judge=0
-def prime(n):
-    if n%2!=0 and n!=0:
-        for i in range(n,2,-1):
-            for j in range(2, i):
-                if i % j == 0:         
-                    print("Not prime number")
-                    return n      
-                else:
-                    judge=i
-                    return judge
+#判定
+def judge(n):
+    prime=[]
+    if n==2:
+        prime.append(n)
+    elif n==0:
+        return 0
+    elif n<2:
+        return 1
+    for i in range(n,2,-1):
+        for k in range(2,i):
+            if i%k==0:
+                break
+            else:
+                prime.append(i)
+                break
+    if n==prime[0]:
+        return prime[0]
     else:
-        if n==0:
-            print("END")
-            return 0
-        elif n==2:
-            judge=2
-            return judge
-        else:
-            print("Not prime number")
-            return n
+        return 1
 
 while True:
-    if n==prime(n):
-        a=int(input("Input integer number "))
-        print(f"Division: {a**n//n}\nSurplus: {a**n%n}")
-        n=int(input("Input prime number "))
-        continue
-    elif prime(n)==0 or prime(n)<0:
+    if judge(n)==0:
         print("End")
         break
-    else:
+    elif judge(n)==1:
+        print("Not prime number")
         n=int(input("Input prime number "))
+        judge(n)
+    else:
+        a=int(input("Input integer number "))
+        print(f"Division: {a**judge(n)//judge(n)}\nSurplus: {a**judge(n)%judge(n)}")
+        n=int(input("Input prime number "))
+        judge(n)
         continue
